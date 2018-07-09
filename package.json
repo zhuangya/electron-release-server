@@ -22,7 +22,7 @@
     "grunt-contrib-watch": "~1.0.0",
     "grunt-sails-linker": "~0.10.1",
     "grunt-sass": "^1.1.0",
-    "grunt-sync": "~0.5.2",
+    "grunt-sync": "~0.6.2",
     "grunt-wiredep": "^3.0.1",
     "include-all": "~0.1.6",
     "jade": "^1.11.0",
@@ -33,19 +33,22 @@
     "passport": "^0.3.2",
     "passport-ldapauth": "^0.5.0",
     "rc": "~1.1.6",
-    "sails": "~0.12.3",
-    "sails-disk": "^0.10.9",
+    "sails": "~1.0.0",
+    "sails-disk": "^1.0.0",
     "sails-pg-session": "^1.0.1",
-    "sails-postgresql": "^0.12.1",
+    "sails-postgresql": "^1.0.0",
     "semver": "^5.1.0",
     "skipper-disk": "^0.5.4",
     "strip-bom": "^2.0.0",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "snyk": "^1.88.2"
   },
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "app.js",
   "author": {
@@ -53,5 +56,6 @@
     "email": "arek@sredzki.com",
     "url": "http://arek.io/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
